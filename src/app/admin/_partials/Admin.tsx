@@ -2,19 +2,16 @@
 import React from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import MenuBar from "./MenuBar";
+import useAdminStore from "../_states";
 import AvailableComponents from "./AvailableComponents";
 import BuilderArea from "./BuilderArea";
 import FormComponent from "./FormComponent";
 import Logger from "./Logger";
-import useAdminStore from "../_states";
-import useComponentsStorage from "../_hooks/use-componets-storage";
+import MenuBar from "./MenuBar";
 
 const Admin: React.FC = () => {
-  const { setMousePosition } = useAdminStore();
-  // save components to localStorage when components change
-  useComponentsStorage()
-  
+  const { setMousePosition } = useAdminStore(); 
+
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -24,7 +21,7 @@ const Admin: React.FC = () => {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="h-screen w-full inline-flex flex-col">
-        <div className="border-b-2 h-10 w-full ">
+        <div className="border-b-2 h-10 w-full inline-flex items-center justify-center">
           <MenuBar />
         </div>
         <div className="h-full items-center inline-flex">

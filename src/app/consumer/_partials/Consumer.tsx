@@ -18,9 +18,11 @@ const Consumer = () => {
   };
   return (
     <div className="w-full flex justify-center p-2">
-      {components.map((component, index) => (
-        <div key={index}>{renderComponent(component)}</div>
-      ))}
+      <div>
+        {components.map((component, index) => (
+          <div key={index}>{renderComponent(component)}</div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ interface AdminStore {
   components: BaseComponentData[];
   activeComponent: number | null;
   setMousePosition: (mousePosition: MousePosition) => void;
-  setActiveComponents: (index: number) => void;
+  setActiveComponent: (index: number | null) => void;
   setComponents: (
     components:
       | BaseComponentData[]
@@ -25,7 +25,7 @@ const useAdminStore = create<AdminStore>((set) => ({
   setMousePosition: (mousePosition) => {
     set(() => ({ mousePosition }));
   },
-  setActiveComponents: (index) => {
+  setActiveComponent: (index) => {
     set(() => ({ activeComponent: index }));
   },
   setComponents: (components) =>
