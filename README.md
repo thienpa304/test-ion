@@ -46,6 +46,6 @@ This web application is a flexible system for creating and managing quick conten
 
 Check out a video demonstration of the project:
 
-[![Project Demo Video](https://example.com/demo_thumbnail.jpg)](https://example.com/demo_video.mp4)
+[![Project Demo Video](/public/admin-page.png)](/public/video-demo.mp4)
 
 Click the image above to watch the demo on YouTube.

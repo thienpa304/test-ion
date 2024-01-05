@@ -1,11 +1,13 @@
 import React from "react";
 import useAdminStore from "../_states";
+import { BASE_COMPONENTS } from "@/constants/base-components";
 
 const FormComponent = () => {
   const { activeComponent, components, setComponents } = useAdminStore();
   if (activeComponent === null) return <></>;
   const component = components[activeComponent];
-
+  const element = BASE_COMPONENTS.find((item) => item.type === component.type);
+  if (!element) return <></>;
   const handleChangeComponent = (data: { [key: string]: any }) => {
     const newComponents = [...components];
     newComponents[activeComponent].config = data;
@@ -13,7 +15,7 @@ const FormComponent = () => {
   };
   return (
     <div className="p-2">
-      <component.form onChange={handleChangeComponent} />
+      <element.form onChange={handleChangeComponent} />
     </div>
   );
 };
