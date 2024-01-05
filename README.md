@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React + Next.js Drag and Drop Content Builder
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This web application is a flexible system for creating and managing quick content advertising pages. The ecosystem consists of two sites: Admin for content creation and Consumer for displaying the built pages. The Admin site features a drag-and-drop builder with two components - Paragraph and Button, .... The Admin can customize the text of the Paragraph and the label and alert message of the Button, ....
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Screenshots
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Admin Builder:**
+![Admin Builder](/public/admin-page.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Consumer View:**
+![Consumer View](/public/consumer-page.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Drag-and-drop interface for building pages.
+- Customizable Paragraph text and Button, ....
+- View-only mode for Consumer.
 
-To learn more about Next.js, take a look at the following resources:
+## Setup and Run
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone repo
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd folder
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   - Go to `http://localhost:3000/admin` to access the Admin and Consumer sites.
+
+## Video Demo
+
+Check out a video demonstration of the project:
+
+[![Project Demo Video](https://example.com/demo_thumbnail.jpg)](https://example.com/demo_video.mp4)
+
+Click the image above to watch the demo on YouTube.
