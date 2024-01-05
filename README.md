@@ -48,4 +48,4 @@ Check out a video demonstration of the project:
 
 [![Project Demo Video](/public/admin-page.png)](/public/video-demo.mp4)
 
-Click the image above to watch the demo on YouTube.
+Click the image above to download and watch the demo.
