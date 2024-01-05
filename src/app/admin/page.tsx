@@ -1,10 +1,9 @@
 import React from 'react'
-import Admin from "./_components/Admin";
+import Admin from "./_partials/Admin";
 
 const page = () => {
   return (
     <Admin/>
   )
 }
-
 export default page

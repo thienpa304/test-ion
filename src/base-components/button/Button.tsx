@@ -2,12 +2,22 @@
 import React from "react";
 
 interface ButtonProps {
-  label: string;
-  onClick: () => void;
+  text?: string;
+  message?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
-  return <button onClick={onClick}>{label}</button>;
+const Button: React.FC<ButtonProps> = ({
+  text = "button",
+  message = "this is massage alert",
+}) => {
+  const handleClick = (e: React.MouseEvent) => {
+    alert(message);
+  };
+  return (
+    <button className="border p-1" onClick={handleClick}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;
