@@ -8,10 +8,13 @@ import BuilderArea from "./BuilderArea";
 import FormComponent from "./FormComponent";
 import Logger from "./Logger";
 import useAdminStore from "../_states";
+import useComponentsStorage from "../_hooks/use-componets-storage";
 
 const Admin: React.FC = () => {
   const { setMousePosition } = useAdminStore();
-
+  // save components to localStorage when components change
+  useComponentsStorage()
+  
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;

@@ -7,7 +7,7 @@ const FormComponent = () => {
   const component = components[activeComponent];
 
   const handleChangeComponent = (data: { [key: string]: any }) => {
-    const newComponents = components;
+    const newComponents = [...components];
     newComponents[activeComponent].config = data;
     setComponents(newComponents);
   };

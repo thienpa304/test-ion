@@ -42,4 +42,25 @@ const useAdminStore = create<AdminStore>((set) => ({
     })),
 }));
 
+export const saveComponentsStorage = (components: BaseComponentData[]) => {
+  try {
+    const serializedComponent = JSON.stringify(components);
+    localStorage.setItem("components", serializedComponent);
+  } catch (error) {
+    console.error("Error saving component to localStorage:", error);
+  }
+};
+
+export const getComponentsStorage = (): BaseComponentData[] | null => {
+  try {
+    const serializedComponent = localStorage.getItem("components");
+    if (serializedComponent) {
+      return JSON.parse(serializedComponent);
+    }
+    return null;
+  } catch (error) {
+    console.error("Error getting component from localStorage:", error);
+    return null;
+  }
+};
 export default useAdminStore;
