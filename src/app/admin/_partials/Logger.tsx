@@ -7,7 +7,7 @@ const Logger = () => {
     <>
       <div>Instances: {components.length}</div>
       <div>
-        Mouse: ( {mousePosition.x}, {mousePosition.y})
+        Mouse: ({Math.round(mousePosition.x)}, {Math.round(mousePosition.y)})
       </div>
     </>
   );
